@@ -3,13 +3,12 @@
 /// Checks if you are awesome. Spoiler: you are.
 import 'dart:io';
 
-class BlocFileGenerator {
-  String? capitalize(String? name) {
-    return '${name?[0].toUpperCase()}${name?.substring(1).toLowerCase()}';
-  }
+import 'extentions/capitalize_string.dart';
+import 'feature/data/data_source.dart';
 
-  void createBloc(String? label) {
-    var name = capitalize(label);
+class BlocFileGenerator {
+  void createBloc(String label) {
+    var name = label.capitalize();
 
     var blocCode = '''
 class ${name}Bloc{
@@ -17,15 +16,13 @@ class ${name}Bloc{
 }
 ''';
 
-    File('lib/$label/bloc/${label}_bloc.dart')
-        .create(recursive: true)
-        .then((File file) async {
+    File('lib/$label/bloc/${label}_bloc.dart').create(recursive: true).then((File file) async {
       await file.writeAsString(blocCode);
     });
   }
 
-  void createEntityModel(String? label) {
-    var name = capitalize(label);
+  void createEntityModel(String label) {
+    var name = label.capitalize();
 
     var entityModel = '''
 class ${name}GraphQlEntity{
@@ -36,15 +33,13 @@ class ${name}GraphQlEntity{
 }
   ''';
 
-    File('lib/$label/model/entity/${label}_graphql_entity.dart')
-        .create(recursive: true)
-        .then((File file) async {
+    File('lib/$label/model/entity/${label}_graphql_entity.dart').create(recursive: true).then((File file) async {
       await file.writeAsString(entityModel);
     });
   }
 
-  void createRequestModel(String? label) {
-    var name = capitalize(label);
+  void createRequestModel(String label) {
+    var name = label.capitalize();
 
     var getRequestModel = '''
 class Get${name}sRequest {
@@ -57,15 +52,13 @@ class Get${name}sRequest {
 
   ''';
 
-    File('lib/$label/model/request/get_${label}s_request.dart')
-        .create(recursive: true)
-        .then((File file) async {
+    File('lib/$label/model/request/get_${label}s_request.dart').create(recursive: true).then((File file) async {
       await file.writeAsString(getRequestModel);
     });
   }
 
-  void createResponseModel(String? label) {
-    var name = capitalize(label);
+  void createResponseModel(String label) {
+    var name = label.capitalize();
 
     var responseModel = """
 import '../entity/${label}_graphql_entity.dart';
@@ -105,8 +98,8 @@ class Get${name}sGraphQlResponse {
     });
   }
 
-  void createModel(String? label) {
-    var name = capitalize(label);
+  void createModel(String label) {
+    var name = label.capitalize();
 
     createEntityModel(label);
     createRequestModel(label);
@@ -118,9 +111,7 @@ class $name{
 }
   ''';
 
-    File('lib/$label/model/$label.dart')
-        .create(recursive: true)
-        .then((File file) async {
+    File('lib/$label/model/$label.dart').create(recursive: true).then((File file) async {
       await file.writeAsString(modelCode);
       // Stuff to do after file has been created...
     });
@@ -158,16 +149,14 @@ class ${name}sData{
 }
   """;
 
-    File('lib/$label/model/${label}s_data.dart')
-        .create(recursive: true)
-        .then((File file) async {
+    File('lib/$label/model/${label}s_data.dart').create(recursive: true).then((File file) async {
       await file.writeAsString(modelDataCode);
       // Stuff to do after file has been created...
     });
   }
 
-  void createMappers(String? label) {
-    var name = capitalize(label);
+  void createMappers(String label) {
+    var name = label.capitalize();
 
     var entityMapper = """
 import '../model/$label.dart';
@@ -184,9 +173,7 @@ class ${name}GraphQlEntityMapper
 }
     """;
 
-    File('lib/$label/mapper/${label}_graphql_entity_mapper.dart')
-        .create(recursive: true)
-        .then((File file) async {
+    File('lib/$label/mapper/${label}_graphql_entity_mapper.dart').create(recursive: true).then((File file) async {
       await file.writeAsString(entityMapper);
     });
 
@@ -213,15 +200,13 @@ class ${name}GraphQlResponseMapper
 }
     """;
 
-    File('lib/$label/mapper/${label}_graphql_response_mapper.dart')
-        .create(recursive: true)
-        .then((File file) async {
+    File('lib/$label/mapper/${label}_graphql_response_mapper.dart').create(recursive: true).then((File file) async {
       await file.writeAsString(responseMapper);
     });
   }
 
-  void createSource(String? label) {
-    var name = capitalize(label);
+  void createSource(String label) {
+    var name = label.capitalize();
 
     var request = '''
 class ${name}GraphQlRequest{
@@ -235,21 +220,17 @@ class ${name}GraphQlSource{
 }
   ''';
 
-    File('lib/$label/source/${label}_graphql_request.dart')
-        .create(recursive: true)
-        .then((File file) async {
+    File('lib/$label/source/${label}_graphql_request.dart').create(recursive: true).then((File file) async {
       await file.writeAsString(request);
     });
 
-    File('lib/$label/source/${label}_graphql_source.dart')
-        .create(recursive: true)
-        .then((File file) async {
+    File('lib/$label/source/${label}_graphql_source.dart').create(recursive: true).then((File file) async {
       await file.writeAsString(source);
     });
   }
 
-  void createState(String? label) {
-    var name = capitalize(label);
+  void createState(String label) {
+    var name = label.capitalize();
 
     var getState = """
 import '../../base/base_ui_state.dart';
@@ -274,9 +255,7 @@ class Get${name}sState extends BaseUiState<${name}sData> {
 }
   """;
 
-    File('lib/$label/state/get_${label}_state.dart')
-        .create(recursive: true)
-        .then((File file) async {
+    File('lib/$label/state/get_${label}_state.dart').create(recursive: true).then((File file) async {
       await file.writeAsString(getState);
       // Stuff to do after file has been created...
     });
@@ -290,16 +269,14 @@ class ${name}UiStateManager{
 }
     """;
 
-    File('lib/$label/state/${label}_ui_state_manager.dart')
-        .create(recursive: true)
-        .then((File file) async {
+    File('lib/$label/state/${label}_ui_state_manager.dart').create(recursive: true).then((File file) async {
       await file.writeAsString(uiStateManager);
       // Stuff to do after file has been created...
     });
   }
 
-  void createRepo(String? label) {
-    var name = capitalize(label);
+  void createRepo(String label) {
+    var name = label.capitalize();
 
     var repo = '''
 class ${name}Repo{
@@ -307,16 +284,14 @@ class ${name}Repo{
 }
     ''';
 
-    File('lib/$label/repo/${label}_repo.dart')
-        .create(recursive: true)
-        .then((File file) async {
+    File('lib/$label/repo/${label}_repo.dart').create(recursive: true).then((File file) async {
       await file.writeAsString(repo);
       // Stuff to do after file has been created...
     });
   }
 
-  void createModule(String? label) {
-    var name = capitalize(label);
+  void createModule(String label) {
+    var name = label.capitalize();
 
     var module = '''
 class ${name}Module{
@@ -330,17 +305,15 @@ class ${name}Module{
 }
     ''';
 
-    File('lib/$label/di/${label}_module.dart')
-        .create(recursive: true)
-        .then((File file) async {
+    File('lib/$label/di/${label}_module.dart').create(recursive: true).then((File file) async {
       await file.writeAsString(module);
       // Stuff to do after file has been created...
       print('BLoC for $label successfully generated :)');
     });
   }
 
-  void createUi(String? label) {
-    var name = capitalize(label);
+  void createUi(String label) {
+    var name = label.capitalize();
 
     var mainPage = """
 import 'package:flutter/material.dart';
@@ -361,9 +334,7 @@ class _${name}PageState extends State<${name}Page> {
 
     """;
 
-    File('lib/$label/ui/${label}_page.dart')
-        .create(recursive: true)
-        .then((File file) async {
+    File('lib/$label/ui/${label}_page.dart').create(recursive: true).then((File file) async {
       await file.writeAsString(mainPage);
     });
   }
@@ -454,59 +425,50 @@ abstract class BaseMapper<T, V> {
 
   ''';
 
-    final check_base_event =
-        await Directory('lib/base/base_event.dart').exists();
-    final check_ui_state =
-        await Directory('lib/base/base_ui_state.dart').exists();
+    final check_base_event = await Directory('lib/base/base_event.dart').exists();
+    final check_ui_state = await Directory('lib/base/base_ui_state.dart').exists();
     final check_bloc = await Directory('lib/base/base_bloc.dart').exists();
     final check_mapper = await Directory('lib/base/base_mapper.dart').exists();
 
     if (!check_base_event) {
-      await File('lib/base/base_event.dart')
-          .create(recursive: true)
-          .then((File file) async {
+      await File('lib/base/base_event.dart').create(recursive: true).then((File file) async {
         await file.writeAsString(base_event);
       });
     }
 
     if (!check_ui_state) {
-      await File('lib/base/base_ui_state.dart')
-          .create(recursive: true)
-          .then((File file) async {
+      await File('lib/base/base_ui_state.dart').create(recursive: true).then((File file) async {
         await file.writeAsString(base_ui_state);
       });
     }
 
     if (!check_bloc) {
-      await File('lib/base/base_bloc.dart')
-          .create(recursive: true)
-          .then((File file) async {
+      await File('lib/base/base_bloc.dart').create(recursive: true).then((File file) async {
         await file.writeAsString(base_bloc);
       });
     }
 
     if (!check_mapper) {
-      await File('lib/base/base_mapper.dart')
-          .create(recursive: true)
-          .then((File file) async {
+      await File('lib/base/base_mapper.dart').create(recursive: true).then((File file) async {
         await file.writeAsString(base_mapper);
       });
     }
   }
 
-  void createFiles() {
+  void createFiles({required String packageName}) {
     print('Enter bloc name: ');
-    var name = stdin.readLineSync();
+    // var name = stdin.readLineSync();
+    final name = 'never';
     print('Creating bloc module $name');
-
-    createBloc(name);
-    createModel(name);
-    createMappers(name);
-    createSource(name);
-    createState(name);
-    createRepo(name);
-    createModule(name);
-    createUi(name);
-    createBaseFiles();
+    createDataSource(label: name, packageName: packageName);
+    // createBloc(name);
+    // createModel(name ?? '');
+    // createMappers(name);
+    // createSource(name);
+    // createState(name);
+    // createRepo(name);
+    // createModule(name);
+    // createUi(name);
+    // createBaseFiles();
   }
 }
