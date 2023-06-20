@@ -8,6 +8,9 @@ import 'src/feature/domain/entity.dart';
 import 'src/feature/domain/repository.dart';
 import 'src/feature/domain/use_case.dart';
 import 'src/feature/presentation/bloc/create_bloc.dart';
+import 'src/feature/presentation/page.dart';
+import 'src/feature/presentation/pages.dart';
+import 'src/feature/presentation/widgets.dart';
 
 void main() {
   var generator = BlocFileGenerator();
@@ -28,4 +31,7 @@ void main() {
 
   /// presentation
   createBloc(label: 'label', packageName: packageName);
+  createPage(label: 'label', packageName: packageName);
+  createPagesDirectory(label: 'label', packageName: packageName);
+  createWidgetsDirectory(label: 'label', packageName: packageName);
 }

@@ -56,7 +56,9 @@ class ${name}DataSourceImpl implements ${name}DataSource {
  
     """;
 
-  File('lib/features/$label/data/${label}_datasource.dart').create(recursive: true).then((File file) async {
+  File('lib/features/$label/data/data_sources/${label}_datasource.dart')
+      .create(recursive: true)
+      .then((File file) async {
     await file.writeAsString(content);
   });
 }
