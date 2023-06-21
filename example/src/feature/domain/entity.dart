@@ -8,7 +8,8 @@ void createEntity({required String label, required String packageName}) {
   var content = """ 
 import 'package:equatable/equatable.dart';
 import 'package:json_annotation/json_annotation.dart';
-import 'package:$packageName/features/ads/data/models/${label}_model.dart';
+import 'package:$packageName/features/$label/data/models/${label}_model.dart';
+
 
 class ${name}Entity extends Equatable {
   final int id;

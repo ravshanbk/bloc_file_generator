@@ -8,12 +8,11 @@ void bloc({required String label, required String packageName}) {
   var content = """ 
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:formz/formz.dart';
-import 'package:$packageName/core/singletons/service_locator.dart';
+import 'package:formz/formz.dart'; 
 import 'package:$packageName/features/$label/data/repositories/${label}_repository_impl.dart';
-
+import 'package:$packageName/core/data/singletons/service_locator.dart';
 import 'package:$packageName/features/$label/domain/entities/${label}_entity.dart';
-import 'package:$packageName/features/$label/domain/usecases/${label}_usecase.dart';
+import 'package:$packageName/features/$label/domain/use_cases/${label}_usecase.dart';
 
 part '${label}_event.dart';
 part '${label}_state.dart';
@@ -22,7 +21,7 @@ class ${name}Bloc
     extends Bloc<${name}Event, ${name}State> {
   final ${name}UseCase ${label}UseCase =
       ${name}UseCase(
-          ${label}Repository: serviceLocator<${label}RepositoryImpl>());
+          ${label}Repository: serviceLocator<${name}RepositoryImpl>());
   ${name}Bloc() : super(const ${name}State()) {
     on<${name}GetEvent>((event, emit) async {
       emit(state.copyWith(status: FormzSubmissionStatus.inProgress));
@@ -44,7 +43,7 @@ class ${name}Bloc
 
     """;
 
-  File('lib/features/$label/presentation/bloc/$label/${label}_bloc.dart')
+  File('lib/features/$label/presentation/blocs/$label/${label}_bloc.dart')
       .create(recursive: true)
       .then((File file) async {
     await file.writeAsString(content);

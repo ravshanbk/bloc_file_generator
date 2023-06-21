@@ -7,13 +7,9 @@ void createModel({required String label, required String packageName}) {
 
   var content = """ 
 
-import 'package:dio/dio.dart';
-import 'package:$packageName/core/exceptions/exceptions.dart';
-import 'package:$packageName/core/singletons/storage/storage.dart';
-import 'package:$packageName/core/utils/my_functions.dart';
-import 'package:$packageName/features/ads/data/models/announcement_model.dart';
-import 'package:json_annotation/json_annotation.dart';
-import 'package:$packageName/features/ads/domain/entities/category_entity.dart';
+import 'package:dio/dio.dart'; 
+import 'package:json_annotation/json_annotation.dart'; 
+import 'package:$packageName/features/$label/domain/entities/${label}_entity.dart';
 
 part '${label}_model.g.dart';
 

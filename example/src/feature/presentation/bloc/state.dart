@@ -11,19 +11,28 @@ void state({required String label, required String packageName}) {
 class ${name}State extends Equatable {
   final FormzSubmissionStatus status;
   final List<${name}Entity> ${label}s;
+  final String next;
+  final bool hasFetchMore;
   const ${name}State({
     this.status = FormzSubmissionStatus.initial,
     this.${label}s = const [],
+    this.next = '',
+    this.hasFetchMore = false,
+    
   });
   @override
-  List<Object?> get props => [status, ${label}s];
+  List<Object?> get props => [status, ${label}s,next,hasFetchMore,];
 
-  ${name}sState copyWith({
+  ${name}State copyWith({
+  String? next,
+  bool? hasFetchMore,
     FormzSubmissionStatus? status,
     List<${name}Entity>? ${label}s,
   }) {
-    return SingleBuyAnnouncementState(
+    return ${name}State(
       status: status ?? this.status,
+      hasFetchMore: hasFetchMore ?? this.hasFetchMore,
+      next: next ?? this.next,
       ${label}s: ${label}s ?? this.${label}s,
     );
   }
@@ -31,7 +40,7 @@ class ${name}State extends Equatable {
 
     """;
 
-  File('lib/features/$label/presentation/bloc/$label/${label}_state.dart')
+  File('lib/features/$label/presentation/blocs/$label/${label}_state.dart')
       .create(recursive: true)
       .then((File file) async {
     await file.writeAsString(content);

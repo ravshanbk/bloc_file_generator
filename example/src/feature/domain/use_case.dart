@@ -9,7 +9,9 @@ void createUseCase({required String label, required String packageName}) {
 import 'package:$packageName/core/exceptions/failures.dart';
 import 'package:$packageName/core/usecases/usecase.dart';
 import 'package:$packageName/core/utils/either.dart';
-import 'package:$packageName/features/$label/domain/repositories/${label}_repository.dart';
+import 'package:$packageName/features/$label/domain/repositories/${label}_repository.dart'; 
+import 'package:$packageName/features/$label/domain/entities/${label}_entity.dart'; 
+import 'package:$packageName/features/pagination/data/models/generic_pagination.dart';
 
 class ${name}UseCase implements UseCase<GenericPagination<${name}Entity>, String?> {
   final ${name}Repository ${label}Repository;
@@ -18,14 +20,14 @@ ${name}UseCase({
   });
 
   @override
-  Future<Either<Failure, void>> call(String params) async {
-    return await ${label}Repository.get${name}s(params);
+  Future<Either<Failure, GenericPagination<${name}Entity>>> call(String? params) async {
+    return await ${label}Repository.get${name}s(next:params);
   }
 }
 
     """;
 
-  File('lib/features/$label/domain/use_cases/${label}_use_case.dart').create(recursive: true).then((File file) async {
+  File('lib/features/$label/domain/use_cases/${label}_usecase.dart').create(recursive: true).then((File file) async {
     await file.writeAsString(content);
   });
 }

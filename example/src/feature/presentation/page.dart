@@ -42,19 +42,19 @@ class _${name}ScreenState extends State<${name}Screen> {
               child: CupertinoActivityIndicator(),
             );
           }
-          if (state.notificationList.isEmpty) {
+          if (state.labels.isEmpty) {
             return const Center(
               child: Text('No items'),
             );
           }
           return ListView.separated(
             itemBuilder: (context, index) {
-              return const ${name}Item(title: '$label \$index');
+              return   ${name}Item(title: '$label \$index');
             },
             separatorBuilder: (context, index) {
               return const SizedBox(height: 16);
             },
-            itemCount: state.notificationList.length,
+            itemCount: state.labels.length,
           );
         },
       ),

@@ -1,4 +1,3 @@
-
 import 'dart:io';
 
 import '../../extentions/capitalize_string.dart';
@@ -11,22 +10,24 @@ void createRepositoryImpl({required String label, required String packageName}) 
 import 'package:$packageName/core/exceptions/exceptions.dart';
 import 'package:$packageName/core/exceptions/failures.dart';
 import 'package:$packageName/core/utils/either.dart';
-import 'package:$packageName/features/ads/data/datasource/announcements_datasource.dart';
-import 'package:$packageName/features/ads/domain/entities/announcement_entity.dart'; 
+import 'package:$packageName/features/$label/data/data_sources/${label}_datasource.dart';
+import 'package:$packageName/features/$label/domain/entities/${label}_entity.dart'; 
+import 'package:$packageName/features/$label/domain/repositories/${label}_repository.dart'; 
+import 'package:$packageName/features/pagination/data/models/generic_pagination.dart'; 
 
 
 
 class ${name}RepositoryImpl implements ${name}Repository {
-  final ${name}DataSource ${name}DataSource;
+  final ${name}DataSource ${label}DataSource;
 
-  ${name}RepositoryImpl({required this.announcementsDataSource});
+  ${name}RepositoryImpl({required this.${label}DataSource});
 
   @override
-  Future<Either<Failure, List<${name}Entity>>> get${name}s({
+  Future<Either<Failure, GenericPagination<${name}Entity>>> get${name}s({
   String? next,
 }) async {
   try {
-    var result = await ${name}DataSource.get${name}s( 
+    var result = await ${label}DataSource.get${name}s( 
       next: next,
     );
     return Right(result);
@@ -48,7 +49,9 @@ class ${name}RepositoryImpl implements ${name}Repository {
 }
     """;
 
-  File('lib/features/$label/data/repositories/${label}_repository_impl.dart').create(recursive: true).then((File file) async {
+  File('lib/features/$label/data/repositories/${label}_repository_impl.dart')
+      .create(recursive: true)
+      .then((File file) async {
     await file.writeAsString(content);
   });
 }

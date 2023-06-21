@@ -12,13 +12,13 @@ abstract class ${name}Event {}
 
 class ${name}GetEvent extends ${name}Event {
   final int id;
-  ${name}Event({
+  ${name}GetEvent({
     required this.id,
   });
 }
     """;
 
-  File('lib/features/$label/presentation/bloc/$label/${label}_event.dart')
+  File('lib/features/$label/presentation/blocs/$label/${label}_event.dart')
       .create(recursive: true)
       .then((File file) async {
     await file.writeAsString(content);

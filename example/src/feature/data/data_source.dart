@@ -8,15 +8,15 @@ void createDataSource({required String label, required String packageName}) {
   var content = """ 
 
 import 'package:dio/dio.dart';
-import 'package:$packageName/core/exceptions/exceptions.dart';
-import 'package:$packageName/core/singletons/storage/storage.dart'; 
-import 'package:$packageName/features/ads/data/models/announcement_model.dart';
+import 'package:$packageName/core/exceptions/exceptions.dart'; 
+import 'package:$packageName/features/pagination/data/models/generic_pagination.dart';
+import 'package:$packageName/features/$label/data/models/${label}_model.dart';
 
 
 
 abstract class ${name}DataSource { 
     
-  Future<int> get${name}s({required int id});
+  Future<GenericPagination<${name}Model>> get${name}s({required String? next});
 }
 
 
@@ -30,17 +30,17 @@ class ${name}DataSourceImpl implements ${name}DataSource {
 
 
   @override
-  Future<int> get${name}s({required int id}) async {
+  Future<GenericPagination<${name}Model>> get${name}s({required String? next}) async {
     try {
       final response = await _dio.get(
         'replece/this/with/your/end_point',
       );
       if (response.statusCode != null && response.statusCode! >= 200 && response.statusCode! < 300) {
-        return 1;
+        return GenericPagination(next: null, previous:null, results:List.generate(10, (index) =>${name}Model(name: 'name \$index',id: index)), count: 10);
       } else {
         throw ServerException(
           statusCode: response.statusCode ?? 400,
-          errorMessage: MyFunctions.getErrorMessage(response: response.data),
+          errorMessage:  response.data,
         );
       }
     } on ServerException catch (e) {

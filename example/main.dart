@@ -16,7 +16,8 @@ void main() {
   var generator = BlocFileGenerator();
   var current = Directory.current;
 
-  final packageName = current.path.split('\\').toList().last;
+  var packageName = current.path.split('\\').toList().last;
+  // packageName = 'ayol_uchun';
   print('the package name: $packageName');
   // generator.createFiles(packageName: packageName  );
   /// data
