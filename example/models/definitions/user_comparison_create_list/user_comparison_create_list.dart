@@ -1,21 +1,21 @@
 import '../../swagger_model.dart';
-import 'announcement_suggest_typesense_properties/announcement_suggest_typesense_properties.dart';
+import 'user_comparison_create_list_properties/user_comparison_create_list_properties.dart';
 
-class AnnouncementSuggestTypesense {
+class UserComparisonCreateList {
   final List<String> required;
   final String type;
-  final AnnouncementSuggestTypesenseProperties properties;
+  final UserComparisonCreateListProperties properties;
 
-  AnnouncementSuggestTypesense({
+  UserComparisonCreateList({
     required this.required,
     required this.type,
     required this.properties,
   });
 
-  factory AnnouncementSuggestTypesense.fromJson(Map<String, dynamic> json) => AnnouncementSuggestTypesense(
+  factory UserComparisonCreateList.fromJson(Map<String, dynamic> json) => UserComparisonCreateList(
         required: List<String>.from(json['required'].map((x) => x)),
         type: json['type'],
-        properties: AnnouncementSuggestTypesenseProperties.fromJson(json['properties']),
+        properties: UserComparisonCreateListProperties.fromJson(json['properties']),
       );
 
   Map<String, dynamic> toJson() => {

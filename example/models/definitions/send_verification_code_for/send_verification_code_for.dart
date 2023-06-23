@@ -1,21 +1,21 @@
 import '../../swagger_model.dart';
-import 'announcement_suggest_typesense_properties/announcement_suggest_typesense_properties.dart';
+import 'send_verification_code_for_announcement_properties/send_verification_code_for_announcement_properties.dart';
 
-class AnnouncementSuggestTypesense {
+class SendVerificationCodeFor {
   final List<String> required;
   final String type;
-  final AnnouncementSuggestTypesenseProperties properties;
+  final SendVerificationCodeForAnnouncementProperties properties;
 
-  AnnouncementSuggestTypesense({
+  SendVerificationCodeFor({
     required this.required,
     required this.type,
     required this.properties,
   });
 
-  factory AnnouncementSuggestTypesense.fromJson(Map<String, dynamic> json) => AnnouncementSuggestTypesense(
+  factory SendVerificationCodeFor.fromJson(Map<String, dynamic> json) => SendVerificationCodeFor(
         required: List<String>.from(json['required'].map((x) => x)),
         type: json['type'],
-        properties: AnnouncementSuggestTypesenseProperties.fromJson(json['properties']),
+        properties: SendVerificationCodeForAnnouncementProperties.fromJson(json['properties']),
       );
 
   Map<String, dynamic> toJson() => {

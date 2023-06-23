@@ -1,21 +1,21 @@
 import '../../swagger_model.dart';
-import 'announcement_suggest_typesense_properties/announcement_suggest_typesense_properties.dart';
+import 'user_filter_history_delete_properties/user_filter_history_delete_properties.dart';
 
-class AnnouncementSuggestTypesense {
+class UserFilterHistoryDelete {
   final List<String> required;
   final String type;
-  final AnnouncementSuggestTypesenseProperties properties;
+  final UserFilterHistoryDeleteProperties properties;
 
-  AnnouncementSuggestTypesense({
+  UserFilterHistoryDelete({
     required this.required,
     required this.type,
     required this.properties,
   });
 
-  factory AnnouncementSuggestTypesense.fromJson(Map<String, dynamic> json) => AnnouncementSuggestTypesense(
+  factory UserFilterHistoryDelete.fromJson(Map<String, dynamic> json) => UserFilterHistoryDelete(
         required: List<String>.from(json['required'].map((x) => x)),
         type: json['type'],
-        properties: AnnouncementSuggestTypesenseProperties.fromJson(json['properties']),
+        properties: UserFilterHistoryDeleteProperties.fromJson(json['properties']),
       );
 
   Map<String, dynamic> toJson() => {

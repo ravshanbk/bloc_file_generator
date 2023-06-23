@@ -1,21 +1,21 @@
 import '../../swagger_model.dart';
-import 'announcement_suggest_typesense_properties/announcement_suggest_typesense_properties.dart';
+import 'district_region_properties/district_region_properties.dart';
 
-class AnnouncementSuggestTypesense {
+class DistrictRegion {
   final List<String> required;
   final String type;
-  final AnnouncementSuggestTypesenseProperties properties;
+  final DistrictRegionProperties properties;
 
-  AnnouncementSuggestTypesense({
+  DistrictRegion({
     required this.required,
     required this.type,
     required this.properties,
   });
 
-  factory AnnouncementSuggestTypesense.fromJson(Map<String, dynamic> json) => AnnouncementSuggestTypesense(
+  factory DistrictRegion.fromJson(Map<String, dynamic> json) => DistrictRegion(
         required: List<String>.from(json['required'].map((x) => x)),
         type: json['type'],
-        properties: AnnouncementSuggestTypesenseProperties.fromJson(json['properties']),
+        properties: DistrictRegionProperties.fromJson(json['properties']),
       );
 
   Map<String, dynamic> toJson() => {

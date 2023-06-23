@@ -1,21 +1,21 @@
 import '../../swagger_model.dart';
-import 'announcement_suggest_typesense_properties/announcement_suggest_typesense_properties.dart';
+import 'payme_properties/payme_properties.dart';
 
-class AnnouncementSuggestTypesense {
+class Payme {
   final List<String> required;
   final String type;
-  final AnnouncementSuggestTypesenseProperties properties;
+  final PaymeProperties properties;
 
-  AnnouncementSuggestTypesense({
+  Payme({
     required this.required,
     required this.type,
     required this.properties,
   });
 
-  factory AnnouncementSuggestTypesense.fromJson(Map<String, dynamic> json) => AnnouncementSuggestTypesense(
+  factory Payme.fromJson(Map<String, dynamic> json) => Payme(
         required: List<String>.from(json['required'].map((x) => x)),
         type: json['type'],
-        properties: AnnouncementSuggestTypesenseProperties.fromJson(json['properties']),
+        properties: PaymeProperties.fromJson(json['properties']),
       );
 
   Map<String, dynamic> toJson() => {
