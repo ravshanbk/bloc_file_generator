@@ -1,4 +1,3 @@
-import '../../swagger_model.dart';
 import 'district_region_properties/district_region_properties.dart';
 
 class DistrictRegion {

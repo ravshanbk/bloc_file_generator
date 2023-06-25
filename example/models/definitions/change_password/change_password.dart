@@ -1,4 +1,3 @@
-import '../../swagger_model.dart';
 import 'change_password_properties/change_password_properties.dart';
 
 class ChangePassword {

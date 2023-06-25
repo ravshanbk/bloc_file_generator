@@ -1,4 +1,3 @@
-import '../../swagger_model.dart';
 import 'car_review_create_update_properties/car_review_create_update_properties.dart';
 
 class CarReviewCreateUpdate {

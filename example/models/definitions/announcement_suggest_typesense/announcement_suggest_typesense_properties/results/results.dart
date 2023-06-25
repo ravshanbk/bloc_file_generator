@@ -1,4 +1,3 @@
-import '../../../../swagger_model.dart';
 import 'items/items.dart';
 
 class Results {

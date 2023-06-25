@@ -1,4 +1,3 @@
-import '../../swagger_model.dart';
 import 'dealer_markers__properties/dealer_markers__properties.dart';
 
 class DealerMarks {

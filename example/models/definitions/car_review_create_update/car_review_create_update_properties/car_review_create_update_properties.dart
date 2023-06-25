@@ -1,6 +1,5 @@
 import '../../../paths/car_announcement_counter/car_annoucement_counter_get/car_place_category_list_parametr/fluffy_responses/fluffy_200/rent_with_purchase_class/rent_with_purchase.dart';
 import '../../../paths/car_place_category_list/car_place_category_list_get/purple_responses/purple_200/schema/schema_properties/equipment_class/equipment_class.dart';
-import '../../../swagger_model.dart';
 import '../../annoncement_compare/annoncement_compare_properties/year/year.dart';
 import '../../car_place_category/car_place_category_properties/contact_name_class/contact_name_class.dart';
 import '../../car_place_category/car_place_category_properties/is_camparison_class/is_camparison_class.dart';

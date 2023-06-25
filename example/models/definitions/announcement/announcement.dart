@@ -1,4 +1,3 @@
-import '../../swagger_model.dart';
 import 'announcement_properties/announcement_properties.dart';
 
 class Announcement {

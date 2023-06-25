@@ -1,4 +1,3 @@
-import '../../swagger_model.dart';
 import 'car_damage_part_properties/car_damage_part_properties.dart';
 
 class CarDamagedPart {

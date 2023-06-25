@@ -1,4 +1,3 @@
-import '../../swagger_model.dart';
 import 'like_reels_properties/like_reels_properties.dart';
 
 class EReels {

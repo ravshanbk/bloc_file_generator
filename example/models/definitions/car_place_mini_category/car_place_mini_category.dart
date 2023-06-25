@@ -1,4 +1,3 @@
-import '../../swagger_model.dart';
 import 'car_place_mini_category_properties/car_place_mini_category_properties.dart';
 
 class CarPlaceMiniCategory {

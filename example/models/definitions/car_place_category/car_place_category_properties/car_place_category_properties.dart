@@ -1,4 +1,3 @@
-import '../../../swagger_model.dart';
 import 'contact_name_class/contact_name_class.dart';
 import 'is_camparison_class/is_camparison_class.dart';
 

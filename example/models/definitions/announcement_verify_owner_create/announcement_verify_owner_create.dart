@@ -1,4 +1,3 @@
-import '../../swagger_model.dart';
 import 'announcement_verify_owner_create_properties/announcement_verify_owner_create_properties.dart';
 
 class AnnouncementVerifyOwnerCreate {

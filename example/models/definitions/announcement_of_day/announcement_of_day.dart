@@ -1,4 +1,3 @@
-import '../../swagger_model.dart';
 import 'announcement_of_day_properties/announcement_of_day_properties.dart';
 
 class AnnouncementOfDay {

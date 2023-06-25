@@ -1,4 +1,3 @@
-import '../swagger_model.dart';
 import 'additional_service/additional_service.dart';
 import 'annoncement_compare/annoncement_compare.dart';
 import 'announcement/announcement.dart';
@@ -42,7 +41,6 @@ import 'e_reels/e_reels.dart';
 import 'equipment/equipment.dart';
 import 'generation/generation.dart';
 import 'get_last_transaction_status/get_last_transaction_status.dart';
-import 'home_avto_uz_web_auto_backend_src_es_announcements_serializers_py_announcement_serializer/home_avto_uz_web_auto_backend_src_es_announcements_serializers_py_announcement_serializer.dart';
 import 'image/image.dart';
 import 'list_stories/list_stories.dart';
 import 'make/make.dart';
@@ -50,21 +48,27 @@ import 'map_screen_shot/map_screen_shot.dart';
 import 'ment_option/ment_option.dart';
 import 'modidication_type/modidication_type.dart';
 import 'my_annoucement/my_annoucement.dart';
+import 'notification/notification.dart';
 import 'option_class/option_class.dart';
 import 'payme/payme.dart';
+import 'popular_search/popular_search.dart';
 import 'product/product.dart';
 import 'product_category/product_category.dart';
 import 'project_social_auths/project_social_auths.dart';
 import 'reels/reels.dart';
 import 'region/region.dart';
+import 'register_user/register_user.dart';
 import 'rent/rent.dart';
 import 'rent_car/rent_car.dart';
 import 'rent_car_main_page/rent_car_main_page.dart';
 import 'rent_order/rent_order.dart';
 import 'send_verification_code/send_verification_code.dart';
 import 'send_verification_code_for/send_verification_code_for.dart';
+import 'social_auth_login/social_auth_login.dart';
 import 'static_page/static_page.dart';
+import 't_type/t_type.dart';
 import 'tariff/tariff.dart';
+import 'token_refresh/token_refresh.dart';
 import 'user_change_phone/user_change_phone.dart';
 import 'user_comparison_create_list/user_comparison_create_list.dart';
 import 'user_count_data/user_count_data.dart';
@@ -75,8 +79,14 @@ import 'user_filter_history_create/user_filter_history_create.dart';
 import 'user_filter_history_delete/user_filter_history_delete.dart';
 import 'user_filter_history_list/user_filter_history_list.dart';
 import 'user_mini/user_mini.dart';
+import 'user_notification/user_notification.dart';
+import 'user_profile_wish_list/user_profile_wish_list.dart';
 import 'user_reels/user_reels.dart';
+import 'user_search/user_search.dart';
+import 'user_short_info/user_short_info.dart';
+import 'user_wish_list/user_wish_list.dart';
 import 'verification/verification.dart';
+import 'very_long.dart/very_long.dart';
 import 'working_days/working_days.dart';
 import 'year_class/year_class.dart';
 
@@ -110,10 +120,10 @@ class Definitions {
   final AnnouncementVerifyOwnerCreate announcementVerifyOwnerCreate;
   final Make make;
   final CarPlaceMiniCategory model;
-  final Type bodyType;
-  final Type driveType;
-  final Type engineType;
-  final Type gearboxType;
+  final TType bodyType;
+  final TType driveType;
+  final TType engineType;
+  final TType gearboxType;
   final ModificationType modificationType;
   final CarPlaceMiniCategory optionCategory;
   final OptionClass option;
@@ -348,10 +358,10 @@ class Definitions {
         announcementVerifyOwnerCreate: AnnouncementVerifyOwnerCreate.fromJson(json['AnnouncementVerifyOwnerCreate']),
         make: Make.fromJson(json['Make']),
         model: CarPlaceMiniCategory.fromJson(json['Model']),
-        bodyType: Type.fromJson(json['BodyType']),
-        driveType: Type.fromJson(json['DriveType']),
-        engineType: Type.fromJson(json['EngineType']),
-        gearboxType: Type.fromJson(json['GearboxType']),
+        bodyType: TType.fromJson(json['BodyType']),
+        driveType: TType.fromJson(json['DriveType']),
+        engineType: TType.fromJson(json['EngineType']),
+        gearboxType: TType.fromJson(json['GearboxType']),
         modificationType: ModificationType.fromJson(json['ModificationType']),
         optionCategory: CarPlaceMiniCategory.fromJson(json['OptionCategory']),
         option: OptionClass.fromJson(json['Option']),

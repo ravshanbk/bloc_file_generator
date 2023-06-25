@@ -1,4 +1,3 @@
-import '../../swagger_model.dart';
 import 'dealer_reels_properties/dealer_reels_properties.dart';
 
 class DealerReels {

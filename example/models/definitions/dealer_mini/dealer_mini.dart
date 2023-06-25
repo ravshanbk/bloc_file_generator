@@ -1,4 +1,3 @@
-import '../../swagger_model.dart';
 import 'dealer_mini_properties/dealer_mini_properties.dart';
 
 class DealerMini {

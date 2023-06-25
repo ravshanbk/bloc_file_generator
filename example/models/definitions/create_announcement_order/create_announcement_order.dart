@@ -1,4 +1,3 @@
-import '../../swagger_model.dart';
 import 'create_announcement_order_properties/create_announcement_order_properties.dart';
 
 class CreateAnnouncementOrder {

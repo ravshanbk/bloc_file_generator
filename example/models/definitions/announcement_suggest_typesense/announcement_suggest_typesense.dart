@@ -1,4 +1,3 @@
-import '../../swagger_model.dart';
 import 'announcement_suggest_typesense_properties/announcement_suggest_typesense_properties.dart';
 
 class AnnouncementSuggestTypesense {

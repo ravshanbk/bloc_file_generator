@@ -1,4 +1,3 @@
-import '../../swagger_model.dart';
 import 'announcement_filter_counter_properties/announcement_filter_counter_properties.dart';
 
 class AnnouncementFilterCounter {
@@ -13,14 +12,14 @@ class AnnouncementFilterCounter {
   });
 
   factory AnnouncementFilterCounter.fromJson(Map<String, dynamic> json) => AnnouncementFilterCounter(
-    required: List<String>.from(json['required'].map((x) => x)),
-    type: json['type'],
-    properties: AnnouncementFilterCounterProperties.fromJson(json['properties']),
-  );
+        required: List<String>.from(json['required'].map((x) => x)),
+        type: json['type'],
+        properties: AnnouncementFilterCounterProperties.fromJson(json['properties']),
+      );
 
   Map<String, dynamic> toJson() => {
-    'required': List<dynamic>.from(required.map((x) => x)),
-    'type': type,
-    'properties': properties.toJson(),
-  };
+        'required': List<dynamic>.from(required.map((x) => x)),
+        'type': type,
+        'properties': properties.toJson(),
+      };
 }

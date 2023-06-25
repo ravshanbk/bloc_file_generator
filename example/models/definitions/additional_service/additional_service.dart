@@ -1,4 +1,3 @@
-import '../../swagger_model.dart';
 import 'additional_service_properties/additional_service_properties.dart';
 
 class AdditionalService {

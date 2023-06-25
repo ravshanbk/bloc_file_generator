@@ -1,4 +1,3 @@
-import '../../../swagger_model.dart';
 import '../../car_announcement_counter/car_annoucement_counter_get/car_place_category_list_parametr/car_place_category_list_parametr.dart';
 import 'purple_responses/purple_responses.dart';
 

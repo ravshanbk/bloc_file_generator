@@ -1,4 +1,3 @@
-import '../../swagger_model.dart';
 import 'car_review_properties/car_review_properties.dart';
 
 class CarReview {

@@ -1,4 +1,3 @@
-import '../../swagger_model.dart';
 import 'color_properties/color_properties.dart';
 
 class Color {

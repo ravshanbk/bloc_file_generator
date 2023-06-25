@@ -1,4 +1,3 @@
-import '../../swagger_model.dart';
 import 'category_properties/category_properties.dart';
 
 class Category {

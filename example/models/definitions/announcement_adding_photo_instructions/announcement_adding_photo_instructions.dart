@@ -1,4 +1,3 @@
-import '../../swagger_model.dart';
 import 'announcement_adding_photo_instructions_properties/announcement_adding_photo_instructions_properties.dart';
 
 class AnnouncementAddingPhotoInstructions {
