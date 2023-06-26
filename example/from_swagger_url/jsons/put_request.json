@@ -1,0 +1,63 @@
+{
+  "/car/announcement/{id}/update/": {
+    "put": {
+      "operationId": "car_announcement_update_update",
+      "description": "",
+      "parameters": [
+        {
+          "name": "data",
+          "in": "body",
+          "required": true,
+          "schema": {
+            "$ref": "#/definitions/AnnouncementCreate"
+          }
+        }
+      ],
+      "responses": {
+        "200": {
+          "description": "",
+          "schema": {
+            "$ref": "#/definitions/AnnouncementCreate"
+          }
+        }
+      },
+      "tags": [
+        "car"
+      ]
+    },
+    "patch": {
+      "operationId": "car_announcement_update_partial_update",
+      "description": "",
+      "parameters": [
+        {
+          "name": "data",
+          "in": "body",
+          "required": true,
+          "schema": {
+            "$ref": "#/definitions/AnnouncementCreate"
+          }
+        }
+      ],
+      "responses": {
+        "200": {
+          "description": "",
+          "schema": {
+            "$ref": "#/definitions/AnnouncementCreate"
+          }
+        }
+      },
+      "tags": [
+        "car"
+      ]
+    },
+    "parameters": [
+      {
+        "name": "id",
+        "in": "path",
+        "description": "A unique integer value identifying this Объявление.",
+        "required": true,
+        "type": "integer"
+      }
+    ]
+  }
+}

@@ -26,7 +26,7 @@ class ${name}Model extends ${name}Entity {
   factory ${name}Model.fromJson(Map<String, dynamic> json) =>
       _\$${name}ModelFromJson(json);
 
-  Map<String, dynamic> toJson() => _\$${name}ToJson(this);
+  Map<String, dynamic> toJson() => _\$${name}ModelToJson(this);
 }
 
     """;

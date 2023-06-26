@@ -20,7 +20,7 @@ void main() {
   label = label?.deCapitalize();
   label = label?.replaceAll(' ', '');
 
-  // packageName = 'ayol_uchun';
+  packageName = 'yosh_liderlar_hub';
   // print('the package name: $packageName');
   // generator.createFiles(packageName: packageName  );
   if (label != null && label.isNotEmpty) {

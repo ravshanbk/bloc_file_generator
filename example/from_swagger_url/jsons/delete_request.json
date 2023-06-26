@@ -1,0 +1,24 @@
+{"/car/announcement/verify-owner/{id}/delete/": {
+  "delete": {
+    "operationId": "car_announcement_verify-owner_delete_delete",
+    "description": "",
+    "parameters": [],
+    "responses": {
+      "204": {
+        "description": ""
+      }
+    },
+    "tags": [
+      "car"
+    ]
+  },
+  "parameters": [
+    {
+      "name": "id",
+      "in": "path",
+      "description": "A unique integer value identifying this Подтверждение владельца.",
+      "required": true,
+      "type": "integer"
+    }
+  ]
+}}

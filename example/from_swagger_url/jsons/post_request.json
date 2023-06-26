@@ -1,0 +1,30 @@
+{
+  "/car/announcement/call/": {
+    "post": {
+      "operationId": "car_announcement_call_create",
+      "description": "",
+      "parameters": [
+        {
+          "name": "data",
+          "in": "body",
+          "required": true,
+          "schema": {
+            "$ref": "#/definitions/AnnouncementCall"
+          }
+        }
+      ],
+      "responses": {
+        "201": {
+          "description": "",
+          "schema": {
+            "$ref": "#/definitions/AnnouncementCall"
+          }
+        }
+      },
+      "tags": [
+        "car"
+      ]
+    },
+    "parameters": []
+  }
+}
