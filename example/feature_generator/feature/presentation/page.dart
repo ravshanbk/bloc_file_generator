@@ -42,7 +42,7 @@ class _${name}ScreenState extends State<${name}Screen> {
               child: CupertinoActivityIndicator(),
             );
           }
-          if (state.labels.isEmpty) {
+          if (state.${label}s.isEmpty) {
             return const Center(
               child: Text('No items'),
             );
@@ -54,7 +54,7 @@ class _${name}ScreenState extends State<${name}Screen> {
             separatorBuilder: (context, index) {
               return const SizedBox(height: 16);
             },
-            itemCount: state.labels.length,
+            itemCount: state.${label}s.length,
           );
         },
       ),
