@@ -31,7 +31,10 @@ class _${name}ScreenState extends State<${name}Screen> {
   }
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return
+    BlocProvider(
+        create: (context) => vebinarsBloc,
+    child:  Scaffold(
       appBar: AppBar(
         title: const Text('$name'),
       ),
@@ -57,6 +60,7 @@ class _${name}ScreenState extends State<${name}Screen> {
             itemCount: state.${label}s.length,
           );
         },
+      ),
       ),
     );
   }

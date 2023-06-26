@@ -31,6 +31,7 @@ class ${name}DataSourceImpl implements ${name}DataSource {
 
   @override
   Future<GenericPagination<${name}Model>> get${name}s({required String? next}) async {
+   return GenericPagination(next: null, previous:null, results:List.generate(10, (index) =>${name}Model(name: 'name \$index',id: index)), count: 10);
     try {
       final response = await _dio.get(
         'replece/this/with/your/end_point',
