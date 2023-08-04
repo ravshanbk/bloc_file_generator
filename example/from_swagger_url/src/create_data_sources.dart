@@ -1,17 +1,17 @@
 import '../../core/extentions/on_string.dart';
-import '../feature/data/models/generate_model.dart';
-import '../feature/domain/entities/generate_entity.dart';
-import 'commands/get_model_fields.dart';
+import 'commands/get_datasource_fields.dart';
 
 Future<void> createDataSources({required Map<String, dynamic> data, required String packageName}) async {
+  final d = data;
   final values = data.values.toList();
   final keys = data.keys.toList();
+  final f = 7;
 
   for (var i = 0; i < values.length; i++) {
-    if (keys[i].contains('/')) continue;
-    final modelFields = getModelFields(values[i]);
+    final returnContent = getReturnContentOfDataSource(values[i]);
+    final v = 0;
     final label = keys[i].convertToSnakeCase();
-    generateEntity(label: label, packageName: packageName, data: modelFields, name: keys[i]);
-    generateModel(label: label, packageName: packageName, data: modelFields, name: keys[i]);
+    // generateEntity(label: label, packageName: packageName, data: modelFields, name: keys[i]);
+    // generateModel(label: label, packageName: packageName, data: modelFields, name: keys[i]);
   }
 }

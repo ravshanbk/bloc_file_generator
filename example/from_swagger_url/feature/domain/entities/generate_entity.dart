@@ -4,7 +4,7 @@ import '../../../../core/extentions/on_string.dart';
 import '../../../src/helper_models/field_constructor.dart';
 
 void generateEntity(
-    {required String label, required String name, required String packageName, required FieldConstructor data}) {
+    {required String label, required String name, required String packageName, required ModelEntityElements data}) {
   var content = """ 
 import 'package:equatable/equatable.dart';
 import 'package:json_annotation/json_annotation.dart';

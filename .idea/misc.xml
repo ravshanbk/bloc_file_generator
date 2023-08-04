@@ -3,4 +3,9 @@
   <component name="ProjectRootManager">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
+  <component name="com.github.texhnolyzze.jiraworklogplugin.JiraWorklogPluginState">
+    <option name="lastBranch" value="master" />
+    <option name="timers" value="{&quot;master&quot;:{&quot;total&quot;:11570864095900,&quot;updatedAtSinceEpoch&quot;:1690897285.068267200,&quot;paused&quot;:true}}" />
+    <option name="timeSeries" value="[{&quot;branch&quot;:&quot;master&quot;,&quot;started&quot;:1690885722.550412200,&quot;duration&quot;:11570.864095900}]" />
+  </component>
 </project>

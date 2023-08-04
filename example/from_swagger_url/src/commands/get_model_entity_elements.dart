@@ -2,7 +2,7 @@ import '../../../core/extentions/on_string.dart';
 import '../helper_models/field_constructor.dart';
 import '../my_functions/str_to_data_type.dart';
 
-FieldConstructor getModelFields(Map<String, dynamic> src) {
+ModelEntityElements getModelFields(Map<String, dynamic> src) {
   String fields = '';
   String constructors = '';
   String props = '';
@@ -31,7 +31,7 @@ FieldConstructor getModelFields(Map<String, dynamic> src) {
 
     return MapEntry(key, value);
   });
-  return FieldConstructor(
+  return ModelEntityElements(
     constructors: constructors,
     fields: fields,
     superFields: superFields,

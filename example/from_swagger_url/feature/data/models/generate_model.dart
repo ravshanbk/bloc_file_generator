@@ -4,7 +4,7 @@ import '../../../../core/extentions/on_string.dart';
 import '../../../src/helper_models/field_constructor.dart';
 
 void generateModel(
-    {required String label, required String name, required String packageName, required FieldConstructor data}) {
+    {required String label, required String name, required String packageName, required ModelEntityElements data}) {
   var content = """ 
 
 import 'package:dio/dio.dart'; 

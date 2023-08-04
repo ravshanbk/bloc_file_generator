@@ -1,7 +1,7 @@
 import '../../core/extentions/on_string.dart';
 import '../feature/data/models/generate_model.dart';
 import '../feature/domain/entities/generate_entity.dart';
-import 'commands/get_model_fields.dart';
+import 'commands/get_model_entity_elements.dart';
 
 Future<void> createModelEntities({required Map<String, dynamic> data, required String packageName}) async {
   final values = data.values.toList();
