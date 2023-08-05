@@ -61,7 +61,7 @@ String getReturnContentOfDataSource(Map<String, dynamic> src) {
     final isArr = isArray;
     final rc = responseClass;
     final parameters = src['parameters'];
-    final b = 0;
+    final b  = 0;
     if (responseClass.contains('.')) {
       return '';
     } else if (isPagination) {

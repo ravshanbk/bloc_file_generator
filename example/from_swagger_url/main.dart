@@ -29,6 +29,6 @@ Future<void> main() async {
   // final paths = response.data['paths'] as Map<String, dynamic>;
   final paths = localResponse['paths'] as Map<String, dynamic>;
 
-  // await createModelEntities(data: definitions, packageName: packageName);
+  await createModelEntities(data: definitions, packageName: packageName);
   await createDataSources(data: paths, packageName: packageName);
 }

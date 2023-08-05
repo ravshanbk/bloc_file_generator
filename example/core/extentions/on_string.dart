@@ -26,8 +26,8 @@ extension CapitilizeString on String {
     if (isEmpty || length == 1) {
       return this;
     }
-
-    final words = split('_');
+    final vv = replaceAll('-', '_');
+    final words = vv.split('_');
     bool isFirst = true;
 
     final capitalizedWords = words.map((word) {

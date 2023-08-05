@@ -5,7 +5,7 @@
   </component>
   <component name="com.github.texhnolyzze.jiraworklogplugin.JiraWorklogPluginState">
     <option name="lastBranch" value="master" />
-    <option name="timers" value="{&quot;master&quot;:{&quot;total&quot;:11570864095900,&quot;updatedAtSinceEpoch&quot;:1690897285.068267200,&quot;paused&quot;:true}}" />
-    <option name="timeSeries" value="[{&quot;branch&quot;:&quot;master&quot;,&quot;started&quot;:1690885722.550412200,&quot;duration&quot;:11570.864095900}]" />
+    <option name="timers" value="{&quot;master&quot;:{&quot;total&quot;:22817496683600,&quot;updatedAtSinceEpoch&quot;:1691221513.729109200,&quot;paused&quot;:false}}" />
+    <option name="timeSeries" value="[{&quot;branch&quot;:&quot;master&quot;,&quot;started&quot;:1690885722.550412200,&quot;duration&quot;:11570.864095900},{&quot;branch&quot;:&quot;master&quot;,&quot;started&quot;:1691208419.005320600,&quot;duration&quot;:4020.461270900}]" />
   </component>
 </project>
