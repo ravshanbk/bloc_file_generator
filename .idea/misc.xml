@@ -4,8 +4,9 @@
     <output url="file://$PROJECT_DIR$/out" />
   </component>
   <component name="com.github.texhnolyzze.jiraworklogplugin.JiraWorklogPluginState">
+    <option name="closed" value="true" />
     <option name="lastBranch" value="master" />
-    <option name="timers" value="{&quot;master&quot;:{&quot;total&quot;:22817496683600,&quot;updatedAtSinceEpoch&quot;:1691221513.729109200,&quot;paused&quot;:false}}" />
-    <option name="timeSeries" value="[{&quot;branch&quot;:&quot;master&quot;,&quot;started&quot;:1690885722.550412200,&quot;duration&quot;:11570.864095900},{&quot;branch&quot;:&quot;master&quot;,&quot;started&quot;:1691208419.005320600,&quot;duration&quot;:4020.461270900}]" />
+    <option name="timers" value="{&quot;master&quot;:{&quot;total&quot;:29763626953000,&quot;updatedAtSinceEpoch&quot;:1691230805.303915300,&quot;paused&quot;:true}}" />
+    <option name="timeSeries" value="[{&quot;branch&quot;:&quot;master&quot;,&quot;started&quot;:1690885722.550412200,&quot;duration&quot;:11570.864095900},{&quot;branch&quot;:&quot;master&quot;,&quot;started&quot;:1691208419.005320600,&quot;duration&quot;:4020.461270900},{&quot;branch&quot;:&quot;master&quot;,&quot;started&quot;:1691216639.465838200,&quot;duration&quot;:14172.301586200}]" />
   </component>
 </project>

@@ -48,7 +48,7 @@ ParamContentOfDataSource getParamContentOfDataSource(Map<String, dynamic> src) {
     final vv = paramClassName;
   } catch (e) {
     final v = 0;
-    throw Exception('GET OPERATION ID EXCEPTION: ${e.toString()}');
+    // throw Exception('GET OPERATION ID EXCEPTION: ${e.toString()}');
   }
 
   /// param class content

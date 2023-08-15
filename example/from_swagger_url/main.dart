@@ -15,20 +15,20 @@ Future<void> main() async {
 
   var packageName = current.path.split('\\').toList().last;
   final swaggerUrlAvtoUz = 'https://panel.avto.uz/swagger/?format=openapi';
-  final swaggerUrlShirinMeva = 'https://panel.avto.uz/swagger/?format=openapi';
+  final zty = 'https://zty.uicgroup.tech/swagger/?format=openapi';
   var _dio = Dio();
 
-  // final response = await _dio.get(swaggerUrlAvtoUz);
+  final response = await _dio.get(zty);
   var input = await File('C:/Users/rkhuj/StudioProjects/bloc_file_generator/example/from_swagger_url/auto_uz_swag.json')
       .readAsString();
 
   final localResponse = jsonDecode(input);
   final f = 0;
-  // final definitions = response.data['definitions'] as Map<String, dynamic>;
-  final definitions = localResponse['definitions'] as Map<String, dynamic>;
-  // final paths = response.data['paths'] as Map<String, dynamic>;
-  final paths = localResponse['paths'] as Map<String, dynamic>;
+  final definitions = response.data['definitions'] as Map<String, dynamic>;
+  // final definitions = localResponse['definitions'] as Map<String, dynamic>;
+  final paths = response.data['paths'] as Map<String, dynamic>;
+  // final paths = localResponse['paths'] as Map<String, dynamic>;
 
   await createModelEntities(data: definitions, packageName: packageName);
-  await createDataSources(data: paths, packageName: packageName);
+  // await createDataSources(data: paths, packageName: packageName);
 }
